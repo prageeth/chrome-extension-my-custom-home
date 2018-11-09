@@ -25,7 +25,14 @@
 		var $mainContent = $('#main-content');
 		var $mainEditor = $('#main-editor');
 
-		var converter = new showdown.Converter();
+		var converter = new showdown.Converter({
+			tables: true,
+			strikethrough: true,
+			simplifiedAutoLink: true,
+			openLinksInNewWindow: true,
+			emoji: true
+		});
+
 		var simplemde = null;
 		var content = '';
 
