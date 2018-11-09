@@ -82,6 +82,11 @@
 		}
 
 		function initPage() {
+			if (!content) {
+				$mainContent.addClass('content-not-set');
+			} else {
+				$mainContent.removeClass('content-not-set');
+			}
 			$mainContent.html(converter.makeHtml(content));
 		}
 

@@ -133,6 +133,18 @@ a {
   flex-direction: column;
 }
 
+#main-content.content-not-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-content.content-not-set:after {
+  content: 'Click the Edit button to add content';
+  font-size: 300%;
+  color: #ccc;
+}
+
 #main-content code {
   padding: 1rem;
   margin-top: 1rem;
