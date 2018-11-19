@@ -5,6 +5,7 @@ body {
   font-size: 85%;
   margin: 0;
   padding: 0;
+  overflow: scroll!important;
 }
 
 a {
@@ -151,6 +152,8 @@ table > thead > tr > th {
   display: flex;
   min-height: calc(100vh - 30px);
   flex-direction: column;
+  overflow: scroll;
+  height: 0;
 }
 
 #main-content.content-not-set {
