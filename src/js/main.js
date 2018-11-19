@@ -1,6 +1,9 @@
 (function($, window) {
 
 	var PAGE_CONTENT_STORAGE_KEY = 'page-content';
+	var RATE_COUNTUP_STORAGE_KEY = 'rate-count-up';
+
+	var RATE_COUNT_MAX = 20;
 
 	var Storage = {
 
@@ -107,6 +110,29 @@
 
 			$mainContent.removeClass('hidden');
 			$preloader.addClass('hidden');
+
+		});
+
+		// rating
+		Storage.get(RATE_COUNTUP_STORAGE_KEY, function(count) {
+
+			// already rated?
+			if (count < 0) {
+				return;
+			}
+
+			count = count || 0;
+			if (count < RATE_COUNT_MAX) {
+				Storage.set(RATE_COUNTUP_STORAGE_KEY, count + 1);
+				return;
+			}
+			
+			var $ratingContainer = $('#rating');
+
+			$ratingContainer.find('.rating-link').on('click', function() {
+				Storage.set(RATE_COUNTUP_STORAGE_KEY, -1);
+			});
+			$ratingContainer.show();
 
 		});
 
