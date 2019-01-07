@@ -152,7 +152,7 @@ table > thead > tr > th {
   display: flex;
   min-height: calc(100vh - 30px);
   flex-direction: column;
-  overflow: scroll;
+  overflow: unset;
   height: 0;
 }
 
