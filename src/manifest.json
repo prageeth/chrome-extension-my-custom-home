@@ -3,7 +3,7 @@
 
   "name": "My Custom Home",
   "description": "Provides a customisable home page (using mark down)",
-  "version": "1.4",
+  "version": "1.5",
 
   "icons": {
     "128": "icon-128.png"
